@@ -1,0 +1,267 @@
+% ---------------------------- Problem 1----------------------------------
+\subsubsection*{\center Задача № 1.}
+{\bf Условие.~}
+Дана последовательность $\{a_n\} = \dfrac{3n^2}{2-n^2}$ и число $c=-3$. Доказать, что 
+$$\lim\limits_{n\rightarrow\infty}a_n=c,$$
+а именно, для каждого сколь угодно малого числа $\eps>0$ найти наименьшее натуральное число 
+$N=N(\eps)$ такое, что $|a_n-c|<\eps$ для всех номеров $n>N(\eps)$.
+Заполнить таблицу
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		$\eps$ &  $0{,}1$ & $0{,}01$ & $0{,}001$ \\
+		\hline
+		$N(\eps)$ & & & \\
+		\hline
+	\end{tabular}
+\end{center}
+{\bf Решение.~}	
+Рассмотрим неравенство $a_n-c<\eps,\,\forall\eps>0$, учитывая выражение для $a_n$ и значение $c$ из условия варианта,
+получим
+$$
+\biggl|\frac{3n^2}{2-n^2}+3\biggr| < \eps.
+$$
+Неравенство запишем в виде двойного неравентсва и приведём выражение под знаком модуля к общему знаменателю,
+получим
+$$
+-\eps < \frac{6}{2-n^2} < \eps.
+$$
+Заметим, что правое неравенство выполнено для любого номера $n\in\mathbb{N}$, кроме первого, $a_1=3$, поэтому будем рассматривать только левое неравенство 
+$$
+\frac{6}{2-n^2} > -\eps.
+$$
+Выполнив цепочку преобразований, перепишем неравенство относительно $n^2$, и учитывая, что $n\in\mathbb{N}$, получим
+$$
+\begin{array}{c}
+\dfrac{6}{2-n^2} > -\eps. 							\\[8pt]
+-2+n^2 > \dfrac{6}{\eps}, 							\\[8pt]
+n > \sqrt{\,\dfrac{6+2\eps}{\eps}}, 		\\[8pt]
+N(\eps) = \Biggl[\,\sqrt{\,\dfrac{6+2\eps}{\eps}}\,\Biggr],
+\end{array}
+$$
+где $[\phantom{a}]$ --- целая часть числа.
+Заполним таблицу:
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		$\eps$ &  $0{,}1$ & $0{,}01$ & $0{,}001$ \\
+		\hline
+		$N(\eps)$ & 7 & 24 & 77 \\
+		\hline
+	\end{tabular}
+\end{center}
+\textbf{Проверка:}
+$$
+\begin{array}{l}
+|a_8 - c| = \dfrac{6}{62} < 0{,}1,			\\[10pt]
+|a_{25} - c| = \dfrac{6}{623} < 0{,}01,	\\[10pt]
+|a_{78} - c| = \dfrac{6}{6082} < 0{,}001.
+\end{array}
+$$
+
+
+% ---------------------------- Problem 2----------------------------------
+\subsubsection*{\center Задача № 2.}
+{\bf Условие.~}
+Вычислить пределы функций
+$$
+\begin{array}{cc}
+\text{\bf(а):} & \lim\limits_{x\rightarrow2}\dfrac{x^2-x-2}{x^3-x-6}, \\[10pt]
+\text{\bf(б):} & \lim\limits_{x\rightarrow+\infty}\dfrac{x+100x\sqrt{\,x}}{(x+2)\sqrt{x^3+8x+7}}, \\[10pt]
+\text{\bf(в):} & \lim\limits_{x\rightarrow-2}\dfrac{2+\sqrt[3]{\,x-6}}{{x^3+8}}, \\[10pt]
+\text{\bf(г):} & \lim\limits_{x\rightarrow0}\biggl(2-3^{sin{x^2}}\biggr)^{\frac{1}{x^2}}, \\[10pt]
+\text{\bf(д):} & \lim\limits_{x\rightarrow0+}\biggl(\dfrac{\lg{x+1}}{x}\biggr)^{\arctg\biggl(\dfrac{x-1}{x}\biggr)}, \\[10pt]
+\text{\bf(е):} & \lim\limits_{x\rightarrow\pi}\dfrac{x^2-\pi x}{\sin(x)}.
+\end{array}
+$$
+
+{\bf Решение.~}\\
+\text{\bf(а):}
+$$
+\begin{array}{l}
+\lim\limits_{x\rightarrow2}\dfrac{x^2-x-2}{x^3-x-6} = 
+\lim\limits_{x\rightarrow2}\dfrac{(x-2)(x+1)}{(x-2)(x^2+2x+3)} = 
+\lim\limits_{x\rightarrow2}\dfrac{(x+1)}{x^2+2x+3} = 
+\dfrac{3}{11}.
+\end{array}
+$$	
+\text{\bf(б):}
+$$
+\begin{array}{l}
+\lim\limits_{x\rightarrow+\infty}\dfrac{x+100x\sqrt{\,x}}{(x+2)\sqrt{x^3+8x+7}} =
+\lim\limits_{x\rightarrow+\infty}\dfrac{\dfrac{x}{x^{1,5}}+\dfrac{100x^{1,5}}{x^{1,5}}}{(x+2)\sqrt{\dfrac{x^3}{x^3}+\dfrac{8x}{x^3}+\dfrac{7}{x^3}}}= 
+\lim\limits_{x\rightarrow+\infty}\dfrac{100}{x+2} = 0.
+\end{array}
+$$	
+\text{\bf(в):}
+$$
+\begin{array}{l}
+\lim\limits_{x\rightarrow-2}\dfrac{2+\sqrt[3]{\,x-6}}{{x^3+8}} =
+\lim\limits_{x\rightarrow-2}\dfrac{x+2}{(x+2)(x^2-2x+4)((x-6)^{\frac{2}{3}}-2(x-6)^{\frac{1}{3}}+4)} = \\
+\lim\limits_{x\rightarrow-2}\dfrac{1}{(x^2-2x+4)((x-6)^{\frac{2}{3}}-2(x-6)^{\frac{1}{3}}+4)} = \dfrac{1}{256}
+
+\end{array}
+$$
+\text{\bf(г):}	
+$$
+\begin{array}{l}
+\lim\limits_{x\rightarrow0}\biggl(2-3^{sin{x^2}}\biggr)^{\frac{1}{x^2}} = 
+e^{\lim\limits_{x\rightarrow0}\dfrac{\ln{(2-3^{sin{x^2}})}}{{x^2}}} \equiv 
+e^{\lim\limits_{x\rightarrow0}\dfrac{{(1-3^{sin{x^2}})}}{{x^2}}} \equiv \\
+e^{\lim\limits_{x\rightarrow0}\dfrac{{-\sin{x^2}\ln{3}}}{{x^2}}} = 
+e^{\lim\limits_{x\rightarrow0}-\ln{3}} = 
+\dfrac{1}{3}.
+\end{array}
+$$
+\text{\bf(д):}
+$$
+\lim\limits_{x\rightarrow0+}\biggl(\dfrac{\lg{x+1}}{x}\biggr)^{\arctg\biggl(\dfrac{x-1}{x}\biggr)} \equiv 
+\lim\limits_{x\rightarrow0+}\biggl(\dfrac{1}{\ln{10}}\biggr)^{\frac{-\pi}{2}} = 
+\biggl(\ln{10}\biggr)^{\frac{\pi}{2}}.
+$$
+\text{\bf(е):}
+$$
+\begin{array}{l}
+\lim\limits_{x\rightarrow\pi}\dfrac{x^2-\pi x}{\sin(x)} = 
+\biggl|
+\begin{array}{ll}
+t = x - \pi 	\\ 
+t\rightarrow0 
+\end{array}
+\biggr| =
+\lim\limits_{t\rightarrow0}\dfrac{(t+\pi)^2-\pi (t+\pi)}{\sin{(t+\pi)}} = \\
+ \lim\limits_{t\rightarrow0}\dfrac{t^2+\pi t}{-\sin{t}} = 
+ \lim\limits_{t\rightarrow0}\dfrac{t(t+\pi)}{-\sin{t}} =
+\lim\limits_{t\rightarrow0}(-t-\pi)=
+ - \pi.
+\end{array}
+$$
+
+
+% ---------------------------- Problem 3----------------------------------
+\subsubsection*{\center Задача № 3.}
+{\bf Условие.~}\\
+\text{\bf(а):} Показать, что данные функции
+$f(x)$ и $g(x)$ являются бесконечно малыми или бесконечно большими
+при указанном стремлении аргумента. \\
+\text{\bf(б):} Для каждой функции $f(x)$ и $g(x)$ записать главную часть
+(эквивалентную ей функцию)  вида $C(x-x_0)^{\alpha}$ при $x\rightarrow x_0$ или $Cx^{\alpha}$
+при $x\rightarrow\infty$, указать их порядки малости (роста). \\
+\text{\bf(в):} Сравнить функции $f(x)$ и $g(x)$ при указанном стремлении.
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		№ варианта & функции $f(x)$ и $g(x)$ & стремление \\[6pt]
+		%\hline
+		30 & $f(x) = \sqrt[3]{x+\sqrt{x}},~g(x)=\sqrt{x+\sqrt[3]{x+\sqrt{x}}}$ & $x\rightarrow+\infty$ \\
+		\hline
+	\end{tabular}
+\end{center}
+{\bf Решение.~}\\
+\text{\bf(а):}~Покажем, что $f(x)$ и $g(x)$ бесконечно большие функции,
+$$
+\begin{array}{cc}
+\lim\limits_{x\rightarrow+\infty}f(x) = \lim\limits_{x\rightarrow+\infty}\sqrt[3]{x+\sqrt{x}} = +\infty. \\
+\lim\limits_{x\rightarrow+\infty}g(x) = \lim\limits_{x\rightarrow+\infty}\sqrt{x+\sqrt[3]{x+\sqrt{x}}}  = +\infty.
+\end{array}
+$$	
+\text{\bf(б):}~Так как $f(x)$ и $g(x)$ бесконечно большие функции, то эквивалентными им будут функции вида 
+$Cx^{\alpha}$ при $x\rightarrow\infty$. Найдём эквивалентную для $f(x)$ из условия
+$$
+\lim\limits_{x\rightarrow\infty}\dfrac{f(x)}{x^{\alpha}} = C,
+$$
+где $C$ --- некоторая константа. Рассмотрим предел
+$$
+\lim\limits_{x\rightarrow+\infty}\dfrac{f(x)}{x^{\alpha}} = 
+\lim\limits_{x\rightarrow+\infty}\dfrac{\sqrt[3]{x+\sqrt{x}}}{x^{\alpha}} =
+\lim\limits_{x\rightarrow+\infty}{\sqrt[3]{\dfrac{x}{x^{3\alpha}}+\sqrt{\dfrac{x}{x^{6\alpha}}}}} =
+\lim\limits_{x\rightarrow+\infty}\sqrt[3]{x^{1-3\alpha}+\sqrt{x^{1-6\alpha}}}.
+$$
+При $\alpha=\dfrac{1}{3}$ последний предел равен $1$, отсюда $C=\dfrac{1}{3}$ и 
+$$
+f(x)\sim x^{\frac{1}{3}}~\text{при}~x\rightarrow+\infty.
+$$
+Аналогично, рассмотрим предел
+$$
+\lim\limits_{x\rightarrow+\infty}\dfrac{g(x)}{x^{\alpha}} = 
+\lim\limits_{x\rightarrow+\infty}\dfrac{\sqrt{x+\sqrt[3]{x+\sqrt{x}}}}{x^{\alpha}} =
+\lim\limits_{x\rightarrow+\infty}\sqrt{x^{1-2\alpha}+\sqrt[3]{x^{1-6\alpha}+\sqrt{x^{1-12\alpha}}}}.
+$$
+При $\alpha=\dfrac{1}{2}$ последний предел равен $1$, отсюда $C=\dfrac{1}{2}$ и
+$$
+g(x)\sim x^{\frac{1}{2}}~\text{при}~x\rightarrow+\infty.
+$$
+\text{\bf(в):}~Для сравнения функций $f(x)$ и $g(x)$ рассмотрим предел их отношения при указанном стремлении
+$$
+\lim\limits_{x\rightarrow+\infty}\dfrac{f(x)}{g(x)}.
+$$
+Применим эквивалентности, определенные в пункте (б), получим
+$$
+\lim\limits_{x\rightarrow+\infty}\dfrac{f(x)}{g(x)} = 
+\lim\limits_{x\rightarrow+\infty}\dfrac{x^\frac{1}{3}}{x^{\frac{1}{2}}} = 
+\lim\limits_{x\rightarrow+\infty} x^{-\frac{1}{6}} = 0.  
+$$
+Отсюда, $f(x)$ есть бесконечно большая функция менее высокого порядка роста, чем $g(x)$.
+
+% ---------------------------- Problem 4----------------------------------
+\subsubsection*{\center Задача № 4.}
+{\bf Условие.~}\\
+Найти точки разрыва функции 
+$$
+y = f(x) \equiv 
+\begin{cases}
+\arctg(\dfrac{1}{x+2}),				&\quad x\leqslant0, \\
+\dfrac{\ln{x}}{\sqrt[3]{x}-1},&\quad x>0.
+\end{cases}
+$$ 
+и определить их характер. Построить фрагменты графика функции в окрестности каждой точки разрыва. \\
+{\bf Решение.~}	
+Особыми точками являются точки $x=-2,\,0,\,1$. Рассмотрим односторонние пределы в окресности каждой из особых точек
+$$
+\begin{array}{lll}
+\lim\limits_{x\rightarrow 0-} \arctg(\dfrac{1}{x+2}) = \arctg{\dfrac{1}{2}}, &
+\lim\limits_{x\rightarrow 1-} \dfrac{\ln{x}}{\sqrt[3]{x}-1} = 3, &
+\lim\limits_{x\rightarrow -2-} \arctg(\dfrac{1}{x+2}) = \dfrac{-\pi}{2}, \\  
+\lim\limits_{x\rightarrow 0+} \dfrac{\ln{x}}{\sqrt[3]{x}-1} = +\infty, &
+\lim\limits_{x\rightarrow 1+} \dfrac{\ln{x}}{\sqrt[3]{x}-1} = 3, & 
+  \lim\limits_{x\rightarrow -2+} \arctg(\dfrac{1}{x+2}) = \dfrac{\pi}{2}.
+\end{array}
+$$
+
+
+\begin{center}
+	\begin{tikzpicture}
+	 \def\func{rad(atan((pow(\x+2,-1))))}
+	
+	\begin{axis}[xmin=-4.75,
+	xmax=9.5, 
+	ymin=0,
+	ymax=4.5,
+	width=\textwidth,
+	height=0.75\textwidth,
+	axis x line=middle,
+	axis y line=middle, 
+	every axis x label/.style={at={(current axis.right of origin)},anchor=west},
+	every inner x axis line/.append style={|-latex'},
+	every inner y axis line/.append style={|-latex'},
+	minor tick num=1,			
+	axis equal=true,
+	xlabel=$x$, 
+	ylabel=$y$,          
+	samples=600,
+	clip=true,
+	]
+	\addplot[color=black, line width=1.5pt,domain=-5:-2.0001] {\func};
+	\addplot[color=black, line width=1.5pt,domain=-1.9999:0] {\func};
+	\addplot[color=black, line width=1.5pt,domain=0:0.95]{ln(\x)/(\x^(1/3)-1)};
+	\addplot[color=black, line width=1.5pt,domain=1.05:9.5]{ln(\x)/(\x^(1/3)-1)};
+	\addplot[
+	mark=*,
+	mark options={fill=white, draw=black},
+	only marks,
+	] coordinates {(-2, -1.570796) (-2, 1.570796) (1, 3) (0, 0.464)};
+	\end{axis}
+	\end{tikzpicture}
+\end{center}
+Отсюда, точка $x = -2$ --- точка конечного разрыва 1--го рода, а точка $x = 0$ --- точка
+разрыва 2--го рода, а точка $x = 1$ --- точка устранимового разрыва 1--го рода.
